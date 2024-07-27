@@ -1,0 +1,80 @@
+// Colors
+$black: #000;
+$white: #fff;
+$bgDark: #09090b;
+
+// Media Queries
+$sm: 576px; // min-width
+$md: 768px; // min-width
+$lg: 992px; // min-width
+$xl: 1200px; // min-width
+$xxl: 1400px; // min-width
+
+:root {
+	font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(#808080, .3);
+
+    &:hover {
+        background: rgba(#808080, .1); 
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: $md;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+body.mode {
+    
+    &__dark {
+        background-color: $bgDark;
+        transition: .3s;
+
+        * {
+            color: $white;
+        }
+
+    }
+
+    &__light {
+        color: $black;
+        background-color: $white;
+        transition: .3s;
+        
+        * {
+            color: $black;
+        }
+
+    }
+}
