@@ -53,8 +53,9 @@
 }
 
 .sec-about {
-    padding: 60px 0;
-
+    padding: 24px 0;
+    border-bottom: 1.5px solid #909090;
+    
     &__wrapper {
         display: flex;
         align-items: flex-start;
@@ -79,7 +80,7 @@
                 opacity: .9;
                 padding-bottom: 24px;
                 margin-bottom: 24px;
-                border-bottom: 1.5px solid;
+                border-bottom: 1.5px solid #909090;
                 display: block;
 
                 b {
@@ -118,6 +119,213 @@
             height: 200px;
             border-radius: 50%;
          }
+    }
+}
+
+.sec-stacks {
+    padding: 60px 0;
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        opacity: .9;
+        margin-bottom: 24px;
+
+        b {
+            font-weight: 600;
+        }
+
+    }
+
+    &__lst {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__item {
+            border-bottom: 1px dashed #909090;
+            padding: 0 0 17px;
+            width: 100%;
+            margin: 0 0 17px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-align: center;
+
+            @media (min-width: $md) {
+                width: 350px;
+                max-width: 50%;
+            }
+
+            i {
+                font-size: 3.2rem;
+                color: #909090 !important;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                margin-right: 8px;
+            }
+
+            &__html {
+                i {
+                    color: #e34f26;
+                }
+            }
+
+            &__css {
+                i {
+                    color: #0099e5;
+                }
+            }
+
+            &__sass {
+                i {
+                    color: #ff4c4c;
+                }
+            }
+
+            &__js {
+                i {
+                    color: #f7df1e;
+                }
+            }
+
+            &__angular {
+                i {
+                    color: #b52e31;
+                }
+            }
+
+            &__vue {
+                i {
+                    color: #42b883;
+                }
+            }
+
+            &__bootstrap {
+                i {
+                    color: #511378;
+                }
+            }
+
+            &__flutter {
+                i {
+                    color: #3fa9f5;
+                }
+            }
+
+            &__package {
+                i {
+                    color: #00aeff;
+                }
+            }
+
+            &__task {
+                i {
+                    color: #ed1c24;
+                }
+            }
+
+            &__git {
+                i {
+                    color: #909090;
+                }
+            }
+
+            &__ide {
+                i {
+                    color: #fca326;
+                }
+            }
+
+            &__agile {
+                i {
+                    color: #0079bf;
+                }
+            }
+
+            &__figma {
+                i {
+                    color: #7d3f98;
+                }   
+            }
+
+            &__photoshop {
+                i {
+                    color: #002663;
+                }
+            }
+
+            &__hardware {
+                i {
+                    color: #ff6900;
+                }
+            }
+        }
+    }
+}
+
+.sec-portfolio {
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        opacity: .9;
+        margin-bottom: 24px;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2.0rem;
+        font-weight: 400;
+        opacity: .9;
+        margin-bottom: 24px;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    &__lst {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        
+        &__item {
+            width: 100%;
+            margin-bottom: 36px;
+
+            @media (min-width: $md) {
+                max-width: 50%;
+                width: 300px;
+            }
+
+            &__link {
+                font-size: 1.6rem;
+                margin: 0 0 6px;
+                display: block;
+                
+                i {
+                    margin-right: 6px;
+                }
+            }
+
+            &__description {
+                opacity: .5;
+                font-size: 1.4rem;
+            }
+
+
+        }
+
     }
 }
 
