@@ -1,14 +1,23 @@
 .sec-navbar-menu {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    padding: 24px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 10;
 
-    @media (max-width: $sm) {
-        align-items: center;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 24px 20px;
+
+        @media (max-width: $sm) {
+            align-items: center;
+        }
     }
-
+    
     &__lst {
         display: flex;
         align-items: center;
@@ -53,7 +62,7 @@
 }
 
 .sec-about {
-    padding: 24px 0;
+    padding: 107px 0 24px;
     border-bottom: 1.5px solid #909090;
     
     &__wrapper {
