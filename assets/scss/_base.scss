@@ -52,7 +52,6 @@ img {
     max-width: $md;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
 }
 
 body.mode {
@@ -65,6 +64,11 @@ body.mode {
             color: $white;
         }
 
+        .sec-navbar-menu {
+            background-color: $bgDark;
+            transition: .3s;
+        }
+
     }
 
     &__light {
@@ -74,6 +78,11 @@ body.mode {
         
         * {
             color: $black;
+        }
+
+        .sec-navbar-menu {
+            background-color: $white;
+            transition: .3s;
         }
 
     }
