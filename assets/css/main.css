@@ -94,11 +94,9 @@ body.mode__light {
       @media (min-width: 576px) {
         .sec-navbar-menu__lst__item {
           margin: 0 12px; } }
-      .sec-navbar-menu__lst__item:last-child {
-        margin-bottom: 0; }
-        @media (min-width: 576px) {
-          .sec-navbar-menu__lst__item:last-child {
-            margin-right: 0; } }
+      @media (min-width: 576px) {
+        .sec-navbar-menu__lst__item:last-child {
+          margin-right: 0; } }
       .sec-navbar-menu__lst__item__a {
         font-size: 1.6rem;
         text-decoration: none;
@@ -127,12 +125,13 @@ body.mode__light {
   border-bottom: 1.5px solid #909090; }
   .sec-about__wrapper {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between; }
-    @media (max-width: 576px) {
+    flex-direction: column-reverse;
+    align-items: center; }
+    @media (min-width: 576px) {
       .sec-about__wrapper {
-        flex-direction: column-reverse;
-        align-items: center; } }
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between; } }
     @media (min-width: 768px) {
       .sec-about__wrapper__cont {
         padding-right: 60px;
@@ -158,7 +157,6 @@ body.mode__light {
       font-weight: 400;
       margin-left: 18px; }
       .sec-about__wrapper__cont__lst__item a {
-        text-decoration: none;
         font-weight: 600; }
     .sec-about__wrapper__img {
       width: 200px;
@@ -277,16 +275,18 @@ body.mode__light {
   .sec-footer__cont {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
-    @media (max-width: 576px) {
+    align-items: center;
+    flex-direction: column-reverse; }
+    @media (min-width: 576px) {
       .sec-footer__cont {
-        flex-direction: column-reverse; } }
+        flex-direction: row; } }
     .sec-footer__cont__desc {
       font-size: 1.4rem;
-      opacity: .5; }
-      @media (max-width: 576px) {
+      opacity: .5;
+      margin-top: 12px; }
+      @media (min-width: 576px) {
         .sec-footer__cont__desc {
-          margin-top: 12px; } }
+          margin-top: 0; } }
     .sec-footer__cont__social {
       display: flex; }
       .sec-footer__cont__social__item {
