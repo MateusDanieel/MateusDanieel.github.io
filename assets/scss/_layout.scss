@@ -7,28 +7,69 @@
     z-index: 10;
 
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        flex-direction: column;
         padding: 24px 20px;
 
-        @media (max-width: $sm) {
-            align-items: center;
+        @media (min-width: $sm) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+    }
+
+    &__bt-hamburger {
+        background-color: transparent;
+        border: 0;
+        font-size: 2.4rem;
+        opacity: .5;
+        
+        @media (min-width: $sm) {
+            display: none;
+        }
+
+        &:hover {
+            opacity: .9;
         }
     }
     
     &__lst {
-        display: flex;
-        align-items: center;
-        
+        transition: .3s;
+
+        @media (min-width: $sm) {
+            display: flex;
+            align-items: center;
+        }
+
+        &:not(.is-actived) {
+            
+            @media (max-width: $sm) {
+                height: 0;
+
+                .sec-navbar-menu__lst__item {
+                    margin: 0;
+                }
+
+                .sec-navbar-menu__lst__item a {
+                    visibility: hidden;
+                }
+            }
+
+            
+        }
+
         &__item {
-            margin: 0 12px;
+            margin: 12px 0;
+
+            @media (min-width: $sm) {
+                margin: 0 12px;
+            }
 
             &:last-child {
+                margin-bottom: 0;
+                
                 @media (min-width: $sm) {
                     margin-right: 0;
-                }
+                } 
             }
 
             &__a {
@@ -50,7 +91,13 @@
                 opacity: .5;
                 cursor: pointer;
                 padding: 0;
-               
+
+                @media (max-width: $sm) {
+                    position: absolute;
+                    top: 24px;
+                    right: 20px;
+                }
+
                 &:hover {
                     opacity: .9;
                 }
