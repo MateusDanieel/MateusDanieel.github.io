@@ -27,3 +27,20 @@
 
     document.querySelector('.sec-about__wrapper__cont__lst__item__age').innerHTML = getYear - 1997;
 })();
+
+(() => {
+    'use strict';
+
+    const bt = document.querySelector('.sec-navbar-menu__bt-hamburger');
+    const menu = document.querySelector('.sec-navbar-menu__lst');
+
+    bt.addEventListener('click', () => {
+        if (!menu.classList.contains('is-actived')) {
+            menu.classList.add('is-actived');
+            bt.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+            menu.classList.remove('is-actived');
+            bt.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+    });
+})();
