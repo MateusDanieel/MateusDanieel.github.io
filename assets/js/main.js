@@ -28,6 +28,7 @@
     document.querySelector('.sec-about__wrapper__cont__lst__item__age').innerHTML = getYear - 1997;
 })();
 
+// menu hamburger
 (() => {
     'use strict';
 
