@@ -44,4 +44,11 @@
             bt.innerHTML = '<i class="fa-solid fa-bars"></i>';
         }
     });
+
+    window.addEventListener('scroll', () => {
+        setTimeout(() => {
+            menu.classList.remove('is-actived');
+            bt.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }, 1000);
+    });
 })();
