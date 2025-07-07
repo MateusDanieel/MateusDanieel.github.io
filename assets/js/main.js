@@ -36,19 +36,16 @@
     const menu = document.querySelector('.sec-navbar-menu__lst');
 
     bt.addEventListener('click', () => {
-        if (!menu.classList.contains('is-actived')) {
-            menu.classList.add('is-actived');
-            bt.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        } else {
-            menu.classList.remove('is-actived');
-            bt.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        }
+        const isOpen = menu.classList.toggle('is-actived');
+        bt.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
     });
 
     window.addEventListener('scroll', () => {
-        setTimeout(() => {
+        if (menu.classList.contains('is-actived')) {
             menu.classList.remove('is-actived');
             bt.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        }, 1000);
+        }
     });
 })();
