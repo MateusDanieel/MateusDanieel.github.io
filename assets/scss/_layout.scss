@@ -41,9 +41,11 @@
 
     &__lst {
         overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.3s ease;
+        //max-height: 0;
+        max-height: 500px;
+        //opacity: 0;
+        opacity: 1;
+        //transition: max-height 0.4s ease, opacity 0.3s ease;
         display: flex;
         flex-direction: column;
         gap: 16px;

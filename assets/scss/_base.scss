@@ -53,6 +53,7 @@ img {
     max-width: $md;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
 body.mode {
@@ -86,5 +87,32 @@ body.mode {
             transition: .3s;
         }
 
+    }
+}
+
+.anchor-lst {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+
+        a {
+            opacity: .5;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            i {
+                font-size: 1.4rem;
+            }
+        }
     }
 }

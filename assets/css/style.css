@@ -42,6 +42,10 @@ img {
   padding: 0 20px;
 }
 
+body {
+  position: relative;
+}
+
 body.mode__dark {
   background-color: #09090b;
   transition: 0.3s;
